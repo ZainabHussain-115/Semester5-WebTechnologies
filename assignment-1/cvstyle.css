@@ -1,0 +1,94 @@
+body {
+  max-width: 1000px;
+  margin: auto;
+  background: #bdd1f6;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+header {
+  text-align: left;
+  max-width: 800px;
+  margin: auto;
+  padding-top: 20px;
+  min-height: 150px;
+}
+h1,
+h2 {
+  color: rgb(3, 3, 89);
+}
+hr {
+  border: 2px solid rgb(3, 3, 89);
+}
+p {
+  text-align: justify;
+}
+
+nav {
+  text-align: center;
+  position: sticky;
+  top: 5px;
+  border-color: rgb(3, 3, 89);
+  border-style: groove;
+  padding: 5px;
+  background-color: rgb(225, 243, 189);
+}
+nav a {
+  text-decoration: dotted;
+  text-decoration-line: underline;
+  color: rgb(3, 3, 89);
+  margin: 0 15px;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: wavy;
+  text-decoration-line: underline;
+}
+img {
+  float: right;
+  height: 125px;
+  width: 125px;
+  border-radius: 50%;
+  margin-top: 10px;
+  border-style: groove;
+  border-color: black;
+  border-width: 5px;
+}
+#about-me {
+  clear: both;
+}
+#skills ul {
+  list-style: none;
+}
+
+#skills li::before {
+  content: "✓ ";
+}
+#education,
+#skills {
+  line-height: 30px;
+}
+
+.contact-links {
+  text-align: center;
+}
+section {
+  padding: 20px;
+  margin: 20px 0;
+}
+
+article {
+  padding: 15px;
+  margin: 15px 0;
+  border: 1px solid gray;
+  border-radius: 8px;
+}
+footer {
+  border-color: rgb(3, 3, 89);
+  border-style: groove;
+  padding: 5px;
+  background-color: rgb(225, 243, 189);
+  margin-top: 30px;
+}
+footer p {
+  text-align: center;
+}
