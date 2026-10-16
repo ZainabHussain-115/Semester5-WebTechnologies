@@ -1,0 +1,251 @@
+<!-- <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OssenFitters | Clothing Store</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="">
+    <div class="announcement-bar">
+      ORDERS & NEW COLLECTIONS — DISCOVER YOUR STYLE
+    </div>
+
+    <section class="hero" id="home">
+      <header class="main-header">
+        <div class="header-top">
+          <button class="menu-button" type="button" aria-label="Open menu">
+            ☰
+          </button>
+
+          <a href="index.html" class="brand-logo"> OSENFITTERS</a>
+
+          <nav class="category-nav" aria-label="Main navigation">
+            <a href="#categories">MEN</a>
+            <a href="#categories">WOMEN</a>
+            <a href="#categories">JUNIORS</a>
+            <a href="#categories">CATEGORIES</a>
+          </nav>
+
+          <div class="header-icons">
+            <a href="#" id="search" aria-label="Search">⌕ &Tab; Search</a>
+            <a href="#" aria-label="Account">♙</a>
+            <a href="#" aria-label="Shopping bag">♧</a>
+          </div>
+        </div>
+      </header>
+
+      <img id="banner-pic" src="home.webp" alt="Osenfitters collection" />
+
+      <div class="hero-text">
+        <h1>NEW COLLECTION</h1>
+        <p>Discover your everyday style</p>
+        <a href="#products" class="shop-button">SHOP NOW</a>
+      </div>
+    </section>
+  </body>
+</html> -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OssenFitters | Clothing Store</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="m-0 font-[Helvetica,Arial,sans-serif] text-[#111111] bg-white">
+    <div
+      class="bg-[#263b39] text-white text-center p-[10px] text-[14px] tracking-[1px]"
+    >
+      ORDERS &amp; NEW COLLECTIONS — DISCOVER YOUR STYLE
+    </div>
+
+    <section class="relative min-h-[600px] overflow-hidden" id="home">
+      <header class="absolute top-0 left-0 w-full z-10 text-white">
+        <div
+          class="min-h-[80px] px-[4%] flex items-center justify-start gap-[40px] w-full"
+        >
+          <button
+            class="bg-transparent border-0 text-[24px] cursor-pointer mr-[10px]"
+            type="button"
+            aria-label="Open menu"
+          >
+            ☰
+          </button>
+
+          <a
+            href="index.html"
+            class="no-underline text-[28px] font-bold tracking-[2px]"
+          >
+            OSENFITTERS
+          </a>
+
+          <nav
+            class="hidden md:flex items-center gap-[25px] p-0 m-0"
+            aria-label="Main navigation"
+          >
+            <a
+              href="#categories"
+              class="no-underline text-[14px] font-medium tracking-[1px] hover:underline"
+              >MEN</a
+            >
+            <a
+              href="#categories"
+              class="no-underline text-[14px] font-medium tracking-[1px] hover:underline"
+              >WOMEN</a
+            >
+            <a
+              href="#categories"
+              class="no-underline text-[14px] font-medium tracking-[1px] hover:underline"
+              >JUNIORS</a
+            >
+            <a
+              href="#categories"
+              class="no-underline text-[14px] font-medium tracking-[1px] hover:underline"
+              >CATEGORIES</a
+            >
+          </nav>
+
+          <div class="flex gap-[20px] ml-auto">
+            <a
+              href="#"
+              class="no-underline text-[18px] underline"
+              aria-label="Search"
+            >
+              ⌕ <span class="hidden sm:inline">Search</span>
+            </a>
+            <a href="#" class="no-underline text-[22px]" aria-label="Account"
+              >♙</a
+            >
+            <a
+              href="#"
+              class="no-underline text-[22px]"
+              aria-label="Shopping bag"
+            ></a>
+          </div>
+        </div>
+      </header>
+
+      <img
+        class="block w-full h-[1000px] object-fill object-center"
+        src="home.webp"
+        alt="Osenfitters collection"
+      />
+
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-[90%] text-white"
+      >
+        <h1
+          class="text-[clamp(28px,5vw,70px)] font-normal text-[rgb(246,80,169)] my-[0.67em]"
+        >
+          NEW COLLECTION
+        </h1>
+        <p class="text-[18px] my-[1em]">Discover your everyday style</p>
+        <a
+          href="#collections"
+          class="inline-block bg-[#fa7878] text-[#f3f2f2] no-underline py-[14px] px-[35px] rounded-[30px] hover:bg-[#f060d3]"
+        >
+          SHOP NOW
+        </a>
+      </div>
+    </section>
+
+    <section
+      id="collections"
+      class="flex flex-row gap-[10px] py-[7px] px-[10px] overflow-x-auto"
+    >
+      <div class="relative w-[45%] sm:w-[30%] lg:w-[18%]">
+        <a
+          href="picnicclub.html"
+          class="z-10 absolute bottom-[10px] left-[10px] text-white font-semibold drop-shadow-md hover:text-black font-bold"
+        >
+          Picnic Club
+        </a>
+        <img
+          class="block w-full aspect-[3/4] object-cover hover:scale-110 z-8"
+          src="picnicclub.webp"
+          alt="picnic club"
+        />
+      </div>
+
+      <div class="relative w-[45%] sm:w-[30%] lg:w-[18%]">
+        <a
+          href="summer.html"
+          class="z-10 absolute bottom-[10px] left-[10px] text-white font-semibold drop-shadow-md hover:text-black hover:font-bold"
+        >
+          Endless Summer
+        </a>
+        <img
+          class="block w-full aspect-[3/4] object-cover hover:scale-110 z-8"
+          src="summer.webp"
+          alt="endless summer"
+        />
+      </div>
+
+      <div class="relative w-[45%] sm:w-[30%] lg:w-[18%]">
+        <a
+          href="office.html"
+          class="z-10 absolute bottom-[10px] left-[10px] text-white font-semibold drop-shadow-md hover:text-black hover:font-bold"
+        >
+          Office Basics
+        </a>
+        <img
+          class="block w-full aspect-[3/4] object-cover hover:scale-110 z-8"
+          src="office.webp"
+          alt="office basics"
+        />
+      </div>
+
+      <div class="relative w-[45%] sm:w-[30%] lg:w-[18%]">
+        <a
+          href="barieid.html"
+          class="z-10 absolute bottom-[10px] left-[10px] text-white font-semibold drop-shadow-md hover:text-black hover:font-bold"
+        >
+          Bari Eid
+        </a>
+        <img
+          class="block w-full aspect-[3/4] object-cover hover:scale-110 z-8"
+          src="barieid.webp"
+          alt="bari eid"
+        />
+      </div>
+
+      <div class="relative w-[45%] sm:w-[30%] lg:w-[18%]">
+        <a
+          href="basics.html"
+          class="z-10 absolute bottom-[10px] left-[10px] text-white font-semibold drop-shadow-md hover:text-black hover:font-bold"
+        >
+          Basics
+        </a>
+        <img
+          class="block w-full aspect-[3/4] object-cover hover:scale-110 z-8"
+          src="basics.webp"
+          alt="basics"
+        />
+      </div>
+
+      <div class="relative w-[45%] sm:w-[30%] lg:w-[18%]">
+        <a
+          href="chotieid.html"
+          class="z-10 absolute bottom-[10px] left-[10px] text-white font-semibold drop-shadow-md hover:text-black hover:font-bold"
+        >
+          Choti Eid
+        </a>
+        <img
+          class="block w-full aspect-[3/4] object-cover hover:scale-110 z-8 transition:transform"
+          src="chotieid.webp"
+          alt="choti eid"
+        />
+      </div>
+    </section>
+  </body>
+</html>
