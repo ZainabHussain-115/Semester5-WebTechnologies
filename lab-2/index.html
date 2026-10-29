@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>lab 2</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-white text-gray-900">
+    <header class="bg-gray-900 text-white">
+      <div
+        class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5"
+      >
+        <a href="#" class="text-2xl font-bold">
+          OSEN<span class="text-pink-400">FITTERS</span>
+        </a>
+
+        <input type="checkbox" id="menu-toggle" class="peer hidden" />
+
+        <nav
+          class="absolute left-0 top-[68px] z-10 hidden w-full flex-col bg-gray-900 px-5 pb-5 peer-checked:flex md:static md:flex md:w-auto md:flex-row md:items-center md:gap-8 md:bg-transparent md:p-0"
+        >
+          <a href="#" class="py-3 hover:text-pink-400 md:py-0">Home</a>
+          <a href="#" class="py-3 hover:text-pink-400 md:py-0">Men</a>
+          <a href="#" class="py-3 hover:text-pink-400 md:py-0">Women</a>
+          <a href="#" class="py-3 hover:text-pink-400 md:py-0"
+            >New Collection</a
+          >
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:text-pink-400"> 🛒 Cart </a>
+
+          <label
+            for="menu-toggle"
+            class="cursor-pointer text-3xl md:hidden"
+            aria-label="Toggle navigation menu"
+          >
+            ☰
+          </label>
+        </div>
+      </div>
+    </header>
+
+    <section class="px-5 py-10 text-center">
+      <h1 class="text-3xl font-bold md:text-4xl">Our Collection</h1>
+
+      <p class="mt-3 text-gray-500">Discover your everyday style.</p>
+    </section>
+
+    <main
+      class="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-5 pb-12 md:grid-cols-2 lg:grid-cols-4"
+    >
+      <article>
+        <img src="basics.webp" alt="Classic Shirt" class="w-full rounded-lg" />
+
+        <h2 class="mt-3 text-lg font-semibold">Classic Shirt</h2>
+        <p class="mt-1 text-gray-600">Rs. 2,499</p>
+      </article>
+
+      <article>
+        <img src="basics.webp" alt="Casual T-Shirt" class="w-full rounded-lg" />
+
+        <h2 class="mt-3 text-lg font-semibold">Casual T-Shirt</h2>
+        <p class="mt-1 text-gray-600">Rs. 1,499</p>
+      </article>
+
+      <article>
+        <img src="basics.webp" alt="Denim Jacket" class="w-full rounded-lg" />
+
+        <h2 class="mt-3 text-lg font-semibold">Denim Jacket</h2>
+        <p class="mt-1 text-gray-600">Rs. 3,999</p>
+      </article>
+
+      <article>
+        <img
+          src="basics.webp"
+          alt="Everyday Hoodie"
+          class="w-full rounded-lg"
+        />
+
+        <h2 class="mt-3 text-lg font-semibold">Everyday Hoodie</h2>
+        <p class="mt-1 text-gray-600">Rs. 2,999</p>
+      </article>
+    </main>
+  </body>
+</html>
