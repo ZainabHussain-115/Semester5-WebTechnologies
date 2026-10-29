@@ -1,86 +1,101 @@
-<!-- <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OssenFitters | Clothing Store</title>
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-
-  <body class="">
-    <div class="announcement-bar">
-      ORDERS & NEW COLLECTIONS — DISCOVER YOUR STYLE
-    </div>
-
-    <section class="hero" id="home">
-      <header class="main-header">
-        <div class="header-top">
-          <button class="menu-button" type="button" aria-label="Open menu">
-            ☰
-          </button>
-
-          <a href="index.html" class="brand-logo"> OSENFITTERS</a>
-
-          <nav class="category-nav" aria-label="Main navigation">
-            <a href="#categories">MEN</a>
-            <a href="#categories">WOMEN</a>
-            <a href="#categories">JUNIORS</a>
-            <a href="#categories">CATEGORIES</a>
-          </nav>
-
-          <div class="header-icons">
-            <a href="#" id="search" aria-label="Search">⌕ &Tab; Search</a>
-            <a href="#" aria-label="Account">♙</a>
-            <a href="#" aria-label="Shopping bag">♧</a>
-          </div>
-        </div>
-      </header>
-
-      <img id="banner-pic" src="home.webp" alt="Osenfitters collection" />
-
-      <div class="hero-text">
-        <h1>NEW COLLECTION</h1>
-        <p>Discover your everyday style</p>
-        <a href="#products" class="shop-button">SHOP NOW</a>
-      </div>
-    </section>
-  </body>
-</html> -->
-
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OssenFitters | Clothing Store</title>
+    <title>OsenFitters | Clothing Store</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
-  <body class="m-0 font-[Helvetica,Arial,sans-serif] text-[#111111] bg-white">
+  <body
+    class="m-0 font-[Helvetica,Arial,sans-serif] text-[#111111] bg-[#F5C9DA]"
+  >
     <div
-      class="bg-[#263b39] text-white text-center p-[10px] text-[14px] tracking-[1px]"
+      class="bg-[#263B39] text-white text-center p-[10px] text-[14px] tracking-[1px]"
     >
       ORDERS &amp; NEW COLLECTIONS — DISCOVER YOUR STYLE
     </div>
 
-    <section class="relative min-h-[600px] overflow-hidden" id="home">
-      <header class="absolute top-0 left-0 w-full z-10 text-white">
+    <section class="relative min-h-[600px] overflow-hidden" id="home ">
+      <header class="absolute top-0 left-0 w-full z-20 text-[#263B39]">
         <div
-          class="min-h-[80px] px-[4%] flex items-center justify-start gap-[40px] w-full"
+          class="min-h-[80px] px-[4%] flex items-center justify-start gap-[40px] w-full z-1000"
         >
-          <button
-            class="bg-transparent border-0 text-[24px] cursor-pointer mr-[10px]"
-            type="button"
-            aria-label="Open menu"
+          <input type="checkbox" id="menu-toggle" class="peer hidden" />
+
+          <label for="menu-toggle" class="cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="size-6"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 5.25Zm0 4.5A.75.75 0 0 1 3.75 9h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 9.75Zm0 4.5a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Zm0 4.5a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </label>
+
+          <label
+            for="menu-toggle"
+            class="pointer-events-none fixed inset-0 z-[100] bg-black/40 opacity-0 transition-opacity peer-checked:pointer-events-auto peer-checked:opacity-100"
           >
-            ☰
-          </button>
+          </label>
+
+          <div
+            class="pointer-events-none fixed left-0 top-0 z-[101] h-screen w-[85%] max-w-[380px] -translate-x-full overflow-y-auto bg-[#263B39] text-[#F5C9DA] shadow-xl transition-transform duration-300 peer-checked:pointer-events-auto peer-checked:translate-x-0"
+          >
+            <div
+              class="flex items-center justify-between border-b border-[#ddd3c5] p-5"
+            >
+              <span class="text-xl font-bold tracking-widest">
+                OSENFITTERS
+              </span>
+
+              <label
+                for="menu-toggle"
+                class="cursor-pointer text-3xl leading-none"
+                aria-label="Close menu"
+              >
+                &times;
+              </label>
+            </div>
+
+            <nav class="p-5">
+              <a
+                href="#home"
+                class="block border-b border-[#ddd3c5] py-5 text-lg"
+                >Home</a
+              >
+              <a
+                href="#collections"
+                class="block border-b border-[#ddd3c5] py-5 text-lg"
+                >Collections</a
+              >
+              <a
+                href="#collections"
+                class="block border-b border-[#ddd3c5] py-5 text-lg"
+                >Men</a
+              >
+              <a
+                href="#women"
+                class="block border-b border-[#ddd3c5] py-5 text-lg"
+                >Women</a
+              >
+              <a
+                href="#juniors"
+                class="block border-b border-[#ddd3c5] py-5 text-lg"
+                >Juniors</a
+              >
+            </nav>
+
+            <p class="px-5 py-4 text-sm tracking-widest text-[#5D7455]">
+              DISCOVER YOUR STYLE
+            </p>
+          </div>
 
           <a
             href="index.html"
@@ -94,22 +109,22 @@
             aria-label="Main navigation"
           >
             <a
-              href="#categories"
+              href="#collections"
               class="no-underline text-[14px] font-medium tracking-[1px] hover:underline"
               >MEN</a
             >
             <a
-              href="#categories"
+              href="#women"
               class="no-underline text-[14px] font-medium tracking-[1px] hover:underline"
               >WOMEN</a
             >
             <a
-              href="#categories"
+              href="#juniors"
               class="no-underline text-[14px] font-medium tracking-[1px] hover:underline"
               >JUNIORS</a
             >
             <a
-              href="#categories"
+              href="#collections"
               class="no-underline text-[14px] font-medium tracking-[1px] hover:underline"
               >CATEGORIES</a
             >
@@ -121,131 +136,315 @@
               class="no-underline text-[18px] underline"
               aria-label="Search"
             >
-              ⌕ <span class="hidden sm:inline">Search</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-6"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
             </a>
             <a href="#" class="no-underline text-[22px]" aria-label="Account"
-              >♙</a
-            >
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-6"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
             <a
               href="#"
               class="no-underline text-[22px]"
               aria-label="Shopping bag"
-            ></a>
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-6"
+              >
+                <path
+                  d="M2.25 2.25a.75.75 0 0 0 0 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 0 0-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 0 0 0-1.5H5.378A2.25 2.25 0 0 1 7.5 15h11.218a.75.75 0 0 0 .674-.421 60.358 60.358 0 0 0 2.96-7.228.75.75 0 0 0-.525-.965A60.864 60.864 0 0 0 5.68 4.509l-.232-.867A1.875 1.875 0 0 0 3.636 2.25H2.25ZM3.75 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM16.5 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z"
+                />
+              </svg>
+            </a>
           </div>
         </div>
       </header>
 
       <img
-        class="block w-full h-[1000px] object-fill object-center"
-        src="home.webp"
+        class="block w-full h-[500px] sm:h-[650px] lg:h-[750px] object-fill object-center"
+        src="collectionpics/Pastel Sky Fashion Portrait.png"
         alt="Osenfitters collection"
       />
 
       <div
-        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-[90%] text-white"
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-[90%] text-[#542047]"
       >
         <h1
-          class="text-[clamp(28px,5vw,70px)] font-normal text-[rgb(246,80,169)] my-[0.67em]"
+          class="text-[clamp(28px,5vw,70px)] font-normal text-[#542047] my-[0.67em]"
         >
           NEW COLLECTION
         </h1>
         <p class="text-[18px] my-[1em]">Discover your everyday style</p>
         <a
-          href="#collections"
-          class="inline-block bg-[#fa7878] text-[#f3f2f2] no-underline py-[14px] px-[35px] rounded-[30px] hover:bg-[#f060d3]"
+          href="#women"
+          class="inline-block bg-[#263B39] text-[#F5C9DA] no-underline py-[14px] px-[35px] rounded-[30px] hover:bg-[#f060d3]"
         >
           SHOP NOW
         </a>
       </div>
     </section>
-
-    <section
-      id="collections"
-      class="flex flex-row gap-[10px] py-[7px] px-[10px] overflow-x-auto"
+    <h1
+      id="women"
+      class="text-center text-3xl font-bold mt-12 mb-6 text-[#263B39]"
     >
-      <div class="relative w-[45%] sm:w-[30%] lg:w-[18%]">
+      WOMEN
+    </h1>
+    <section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5 p-4">
+      <div class="relative w-full min-w-0">
         <a
           href="picnicclub.html"
-          class="z-10 absolute bottom-[10px] left-[10px] text-white font-semibold drop-shadow-md hover:text-black font-bold"
+          class="z-10 absolute bottom-[10px] left-[10px] text-white font-semibold drop-shadow-md hover:text-[#263B39] font-bold"
         >
           Picnic Club
         </a>
         <img
           class="block w-full aspect-[3/4] object-cover hover:scale-110 z-8"
-          src="picnicclub.webp"
+          src="collectionpics/picnicclub.webp"
           alt="picnic club"
         />
       </div>
 
-      <div class="relative w-[45%] sm:w-[30%] lg:w-[18%]">
+      <div class="relative w-full min-w-0">
         <a
           href="summer.html"
-          class="z-10 absolute bottom-[10px] left-[10px] text-white font-semibold drop-shadow-md hover:text-black hover:font-bold"
+          class="z-10 absolute bottom-[10px] left-[10px] text-white font-semibold drop-shadow-md hover:text-[#263B39] hover:font-bold"
         >
           Endless Summer
         </a>
         <img
           class="block w-full aspect-[3/4] object-cover hover:scale-110 z-8"
-          src="summer.webp"
+          src="collectionpics/summer.webp"
           alt="endless summer"
         />
       </div>
 
-      <div class="relative w-[45%] sm:w-[30%] lg:w-[18%]">
+      <div class="relative w-full min-w-0">
         <a
           href="office.html"
-          class="z-10 absolute bottom-[10px] left-[10px] text-white font-semibold drop-shadow-md hover:text-black hover:font-bold"
+          class="z-10 absolute bottom-[10px] left-[10px] text-white font-semibold drop-shadow-md hover:text-[#263B39] hover:font-bold"
         >
           Office Basics
         </a>
         <img
           class="block w-full aspect-[3/4] object-cover hover:scale-110 z-8"
-          src="office.webp"
+          src="collectionpics/office.webp"
           alt="office basics"
         />
       </div>
 
-      <div class="relative w-[45%] sm:w-[30%] lg:w-[18%]">
+      <div class="relative w-full min-w-0">
         <a
           href="barieid.html"
-          class="z-10 absolute bottom-[10px] left-[10px] text-white font-semibold drop-shadow-md hover:text-black hover:font-bold"
+          class="z-10 absolute bottom-[10px] left-[10px] text-white font-semibold drop-shadow-md hover:text-[#263B39] hover:font-bold"
         >
           Bari Eid
         </a>
         <img
           class="block w-full aspect-[3/4] object-cover hover:scale-110 z-8"
-          src="barieid.webp"
+          src="collectionpics/barieid.webp"
           alt="bari eid"
         />
       </div>
 
-      <div class="relative w-[45%] sm:w-[30%] lg:w-[18%]">
+      <div class="relative w-full min-w-0">
         <a
           href="basics.html"
-          class="z-10 absolute bottom-[10px] left-[10px] text-white font-semibold drop-shadow-md hover:text-black hover:font-bold"
+          class="z-10 absolute bottom-[10px] left-[10px] text-white font-semibold drop-shadow-md hover:text-[#263B39] hover:font-bold"
         >
           Basics
         </a>
         <img
           class="block w-full aspect-[3/4] object-cover hover:scale-110 z-8"
-          src="basics.webp"
+          src="collectionpics/basics.webp"
           alt="basics"
         />
       </div>
 
-      <div class="relative w-[45%] sm:w-[30%] lg:w-[18%]">
+      <div class="relative w-full min-w-0">
         <a
           href="chotieid.html"
-          class="z-10 absolute bottom-[10px] left-[10px] text-white font-semibold drop-shadow-md hover:text-black hover:font-bold"
+          class="z-10 absolute bottom-[10px] left-[10px] text-white font-semibold drop-shadow-md hover:text-[#263B39] hover:font-bold"
         >
           Choti Eid
         </a>
         <img
           class="block w-full aspect-[3/4] object-cover hover:scale-110 z-8 transition:transform"
-          src="chotieid.webp"
+          src="collectionpics/chotieid.webp"
           alt="choti eid"
         />
       </div>
     </section>
+
+    <!-- JUNIORS SECTION -->
+    <h1 class="text-center text-3xl font-bold mt-12 mb-6 text-[#263B39]">
+      JUNIORS
+    </h1>
+
+    <section
+      id="juniors"
+      class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5 p-4"
+    >
+      <div class="relative w-full min-w-0">
+        <a
+          href="kidsparty.html"
+          class="z-10 absolute bottom-[10px] left-[10px] text-white font-semibold drop-shadow-md hover:text-[#263B39]"
+        >
+          Kids Party
+        </a>
+        <img
+          class="block w-full aspect-[3/4] object-cover hover:scale-110 z-8 transition:transform"
+          src="juniors/blackkid.webp"
+          alt="Kids Party Juniors"
+        />
+      </div>
+
+      <div class="relative w-full min-w-0">
+        <a
+          href="summerkids.html"
+          class="z-10 absolute bottom-[10px] left-[10px] text-white font-semibold drop-shadow-md hover:text-[#263B39]"
+        >
+          Endless Summer Kids
+        </a>
+        <img
+          class="block w-full aspect-[3/4] object-cover hover:scale-110 z-8 transition:transform"
+          src="juniors/yellowkid.webp"
+          alt="Endless Summer Juniors"
+        />
+      </div>
+
+      <div class="relative w-full min-w-0">
+        <a
+          href="office.html"
+          class="z-10 absolute bottom-[10px] left-[10px] text-white font-semibold drop-shadow-md hover:text-[#263B39]"
+        >
+          Basics
+        </a>
+        <img
+          class="block w-full aspect-[3/4] object-cover hover:scale-110 z-8 transition:transform"
+          src="juniors/redkid.webp"
+          alt="Basics Juniors"
+        />
+      </div>
+
+      <div class="relative w-full min-w-0">
+        <a
+          href="skirtfrock.html"
+          class="z-10 absolute bottom-[10px] left-[10px] text-white font-semibold drop-shadow-md hover:text-[#263B39]"
+        >
+          Skirt Frock
+        </a>
+        <img
+          class="block w-full aspect-[3/4] object-cover hover:scale-110 z-8 transition:transform"
+          src="juniors/bluekis.webp"
+          alt="Skirt Frock Juniors"
+        />
+      </div>
+
+      <div class="relative w-full min-w-0">
+        <a
+          href="easypeasy.html"
+          class="z-10 absolute bottom-[10px] left-[10px] text-white font-semibold drop-shadow-md hover:text-[#263B39]"
+        >
+          Easy Peasy
+        </a>
+        <img
+          class="block w-full aspect-[3/4] object-cover hover:scale-110 z-8 transition:transform"
+          src="juniors/yellkid.webp"
+          alt="Easy Peasy Juniors"
+        />
+      </div>
+
+      <div class="relative w-full min-w-0">
+        <a
+          href="cutelily.html"
+          class="z-10 absolute bottom-[10px] left-[10px] text-white font-semibold drop-shadow-md hover:text-[#263B39]"
+        >
+          Cute Lily
+        </a>
+        <img
+          class="block w-full aspect-[3/4] object-cover hover:scale-110 z-8 transition:transform"
+          src="juniors/orangekid.webp"
+          alt="Cute Lily Juniors"
+        />
+      </div>
+    </section>
+
+    <footer class="bg-[#263B39] text-[#F5C9DA] mt-12">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-[8%] py-12"
+      >
+        <div>
+          <h2 class="text-2xl font-bold tracking-widest mb-4">OSENFITTERS</h2>
+          <p class="text-sm leading-6">
+            Discover your everyday style with our latest collections. Fashion
+            made simple, comfortable, and stylish.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-lg mb-4">QUICK LINKS</h3>
+          <ul class="space-y-3 text-sm">
+            <li><a href="index.html" class="hover:underline">Home</a></li>
+            <li><a href="#women" class="hover:underline">Women</a></li>
+            <li><a href="#juniors" class="hover:underline">Juniors</a></li>
+            <li>
+              <a href="#collections" class="hover:underline">Collections</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-lg mb-4">CUSTOMER SERVICE</h3>
+          <ul class="space-y-3 text-sm">
+            <li><a href="#" class="hover:underline">Contact Us</a></li>
+            <li>
+              <a href="#" class="hover:underline">Shipping Information</a>
+            </li>
+            <li><a href="#" class="hover:underline">Returns & Exchanges</a></li>
+            <li><a href="#" class="hover:underline">FAQs</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-lg mb-4">STAY CONNECTED</h3>
+          <p class="text-sm leading-6 mb-4">
+            Stay updated with our latest collections and offers.
+          </p>
+          <a
+            href="mailto:info@osenfitters.com"
+            class="inline-block border border-[#F5C9DA] px-5 py-2 text-sm hover:bg-[#F5C9DA] hover:text-[#263B39] transition"
+          >
+            EMAIL US
+          </a>
+        </div>
+      </div>
+
+      <div class="border-t border-[#F5C9DA]/30 text-center px-4 py-5 text-sm">
+        &copy; 2026 OSENFITTERS. All rights reserved.
+      </div>
+    </footer>
   </body>
 </html>
