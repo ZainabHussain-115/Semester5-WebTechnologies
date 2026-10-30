@@ -281,6 +281,24 @@
         <label for="f-solid" class="filter-label">Solid</label>
       </div>
 
+      <!-- Task 3: search + sort controls -->
+      <div class="flex flex-wrap items-center gap-3 mb-4">
+        <label for="search-box" class="sr-only">Search products</label>
+        <input
+          type="search"
+          id="search-box"
+          placeholder="Search products..."
+          class="border border-gray-400 rounded px-4 py-2 bg-white w-full sm:w-72"
+        />
+        <button
+          type="button"
+          id="sort-btn"
+          class="bg-[#263b39] text-white py-2 px-5 rounded hover:bg-[#405b57]"
+        >
+          Sort by price
+        </button>
+      </div>
+
       <p
         id="no-results"
         class="is-hidden text-center text-lg font-semibold text-[#263b39] py-10"
