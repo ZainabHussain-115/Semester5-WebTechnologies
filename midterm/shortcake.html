@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OsenFitters | Clothing Store</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body
+    class="m-0 font-[Helvetica,Arial,sans-serif] text-[#111111] bg-[#F5C9DA]"
+  >
+    <div
+      class="bg-[#263b39] text-white text-center p-[10px] text-[14px] tracking-[1px]"
+    >
+      ORDERS &amp; NEW COLLECTIONS — DISCOVER YOUR STYLE
+    </div>
+
+    <section class="relative min-h-[200px] overflow-hidden" id="home">
+      <header class="absolute top-0 left-0 w-full z-10 text-black">
+        <div
+          class="min-h-[80px] px-[4%] flex items-center justify-start gap-[40px] w-full"
+        >
+          <input type="checkbox" id="menu-toggle" class="peer hidden" />
+
+          <label for="menu-toggle" class="cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="size-6"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 5.25Zm0 4.5A.75.75 0 0 1 3.75 9h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 9.75Zm0 4.5a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Zm0 4.5a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </label>
+
+          <label
+            for="menu-toggle"
+            class="pointer-events-none fixed inset-0 z-[100] bg-black/40 opacity-0 transition-opacity peer-checked:pointer-events-auto peer-checked:opacity-100"
+          >
+          </label>
+
+          <div
+            class="pointer-events-none fixed left-0 top-0 z-[101] h-screen w-[85%] max-w-[380px] -translate-x-full overflow-y-auto bg-[#263B39] text-[#F5C9DA] shadow-xl transition-transform duration-300 peer-checked:pointer-events-auto peer-checked:translate-x-0"
+          >
+            <div
+              class="flex items-center justify-between border-b border-[#ddd3c5] p-5"
+            >
+              <span class="text-xl font-bold tracking-widest">
+                OSENFITTERS
+              </span>
+
+              <label
+                for="menu-toggle"
+                class="cursor-pointer text-3xl leading-none"
+                aria-label="Close menu"
+              >
+                &times;
+              </label>
+            </div>
+
+            <nav class="p-5">
+              <a
+                href="#home"
+                class="block border-b border-[#ddd3c5] py-5 text-lg"
+                >Home</a
+              >
+              <a
+                href="#collections"
+                class="block border-b border-[#ddd3c5] py-5 text-lg"
+                >Collections</a
+              >
+              <a
+                href="#collections"
+                class="block border-b border-[#ddd3c5] py-5 text-lg"
+                >Men</a
+              >
+              <a
+                href="#women"
+                class="block border-b border-[#ddd3c5] py-5 text-lg"
+                >Women</a
+              >
+              <a
+                href="#juniors"
+                class="block border-b border-[#ddd3c5] py-5 text-lg"
+                >Juniors</a
+              >
+            </nav>
+
+            <p class="px-5 py-4 text-sm tracking-widest text-[#5D7455]">
+              DISCOVER YOUR STYLE
+            </p>
+          </div>
+          <a
+            href="index.html"
+            class="no-underline text-[28px] font-bold tracking-[2px]"
+          >
+            OSENFITTERS
+          </a>
+
+          <nav
+            class="hidden md:flex items-center gap-[25px] p-0 m-0"
+            aria-label="Main navigation"
+          >
+            <a
+              href="#collections"
+              class="no-underline text-[14px] font-medium tracking-[1px] hover:underline"
+              >MEN</a
+            >
+            <a
+              href="#women"
+              class="no-underline text-[14px] font-medium tracking-[1px] hover:underline"
+              >WOMEN</a
+            >
+            <a
+              href="#juniors"
+              class="no-underline text-[14px] font-medium tracking-[1px] hover:underline"
+              >JUNIORS</a
+            >
+            <a
+              href="#collections"
+              class="no-underline text-[14px] font-medium tracking-[1px] hover:underline"
+              >CATEGORIES</a
+            >
+          </nav>
+
+          <div class="flex gap-[20px] ml-auto">
+            <a
+              href="#"
+              class="no-underline text-[18px] underline"
+              aria-label="Search"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-6"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+            <a href="#" class="no-underline text-[22px]" aria-label="Account"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-6"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="no-underline text-[22px]"
+              aria-label="Shopping bag"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-6"
+              >
+                <path
+                  d="M2.25 2.25a.75.75 0 0 0 0 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 0 0-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 0 0 0-1.5H5.378A2.25 2.25 0 0 1 7.5 15h11.218a.75.75 0 0 0 .674-.421 60.358 60.358 0 0 0 2.96-7.228.75.75 0 0 0-.525-.965A60.864 60.864 0 0 0 5.68 4.509l-.232-.867A1.875 1.875 0 0 0 3.636 2.25H2.25ZM3.75 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM16.5 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <address class="sans-serif ml-7">
+          <a href="index.html#women">Women ></a>
+          <a href="picnicclub.html">Picnic Club ></a>
+          <a class="font-semibold" href="shortcake.html">Short Cake</a>
+        </address>
+        <div
+          class="font-mono text-2xl text-center text-[#6c0d8c]"
+          id="current-collection"
+        >
+          PICNIC CLUB - Short Cake
+        </div>
+      </header>
+    </section>
+    <article
+      id="short-cake-details"
+      class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center"
+    >
+      <div class="w-full">
+        <img
+          src="collectionpics/picnicclub.webp"
+          alt="Short Cake from Picnic Club collection"
+          class="w-full h-[450px] md:h-[600px] object-cover rounded-lg"
+        />
+      </div>
+
+      <div class="flex flex-col items-start gap-5">
+        <p class="text-sm tracking-[3px] text-[#6c0d8c] uppercase">
+          Picnic Club Collection
+        </p>
+
+        <h1 class="text-3xl md:text-4xl font-semibold text-[#263b39]">
+          Short Cake
+        </h1>
+
+        <p class="text-2xl font-medium text-[#263b39]">Rs. 7,900</p>
+
+        <p class="text-base leading-7 text-gray-600">
+          Add a playful touch to your everyday wardrobe with the Short Cake
+          outfit from our Picnic Club collection. Designed for a comfortable and
+          stylish look, it is perfect for casual outings and everyday wear.
+        </p>
+
+        <!-- Quantity Selector -->
+        <div class="mt-2">
+          <label for="quantity" class="block mb-2 font-medium">
+            Quantity
+          </label>
+
+          <select
+            id="quantity"
+            name="quantity"
+            class="border border-gray-400 rounded px-4 py-3 w-28 bg-white"
+          >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+
+        <!-- Add to Cart Button -->
+        <button
+          type="button"
+          class="w-full md:w-auto bg-[#263b39] text-white py-4 px-10 rounded-full hover:bg-[#6c0d8c] transition duration-300 cursor-pointer"
+        >
+          ADD TO CART
+        </button>
+
+        <p class="text-sm text-gray-500">Product code: PC-SC-001</p>
+      </div>
+    </article>
+
+    <footer class="bg-[#263B39] text-[#F5C9DA] mt-12">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-[8%] py-12"
+      >
+        <div>
+          <h2 class="text-2xl font-bold tracking-widest mb-4">OSENFITTERS</h2>
+          <p class="text-sm leading-6">
+            Discover your everyday style with our latest collections. Fashion
+            made simple, comfortable, and stylish.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-lg mb-4">QUICK LINKS</h3>
+          <ul class="space-y-3 text-sm">
+            <li><a href="index.html" class="hover:underline">Home</a></li>
+            <li>
+              <a href="index.html#women" class="hover:underline">Women</a>
+            </li>
+            <li>
+              <a href="index.html#juniors" class="hover:underline">Juniors</a>
+            </li>
+            <li>
+              <a href="index.html#collections" class="hover:underline"
+                >Collections</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-lg mb-4">CUSTOMER SERVICE</h3>
+          <ul class="space-y-3 text-sm">
+            <li><a href="#" class="hover:underline">Contact Us</a></li>
+            <li>
+              <a href="#" class="hover:underline">Shipping Information</a>
+            </li>
+            <li><a href="#" class="hover:underline">Returns & Exchanges</a></li>
+            <li><a href="#" class="hover:underline">FAQs</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-lg mb-4">STAY CONNECTED</h3>
+          <p class="text-sm leading-6 mb-4">
+            Stay updated with our latest collections and offers.
+          </p>
+          <a
+            href="mailto:info@osenfitters.com"
+            class="inline-block border border-[#F5C9DA] px-5 py-2 text-sm hover:bg-[#F5C9DA] hover:text-[#263B39] transition"
+          >
+            EMAIL US
+          </a>
+        </div>
+      </div>
+
+      <div class="border-t border-[#F5C9DA]/30 text-center px-4 py-5 text-sm">
+        &copy; 2026 OSENFITTERS. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
