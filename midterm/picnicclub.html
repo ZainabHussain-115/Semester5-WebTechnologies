@@ -6,6 +6,67 @@
     <title>OsenFitters | Clothing Store</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      /* Midterm: N = 15, H = (15 x 7) mod 360 = 105 */
+      :root {
+        --accent: hsl(105, 70%, 45%);
+      }
+
+      /* ---------- Task 1: CSS-only category filter ---------- */
+      #shop {
+        position: relative;
+      }
+      .filter-radio {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        overflow: hidden;
+      }
+      .filter-label {
+        display: inline-block;
+        padding: 0.45rem 1.1rem;
+        border: 2px solid #263b39;
+        border-radius: 9999px;
+        font-size: 0.875rem;
+        letter-spacing: 1px;
+        color: #263b39;
+        cursor: pointer;
+      }
+      .filter-label:hover {
+        border-color: var(--accent);
+      }
+
+      /* selected radio -> its label gets the accent colour */
+      #f-all:checked ~ .filter-bar label[for="f-all"],
+      #f-embroidered:checked ~ .filter-bar label[for="f-embroidered"],
+      #f-printed:checked ~ .filter-bar label[for="f-printed"],
+      #f-solid:checked ~ .filter-bar label[for="f-solid"] {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #111111;
+        font-weight: 700;
+      }
+
+      /* keyboard focus */
+      #f-all:focus-visible ~ .filter-bar label[for="f-all"],
+      #f-embroidered:focus-visible ~ .filter-bar label[for="f-embroidered"],
+      #f-printed:focus-visible ~ .filter-bar label[for="f-printed"],
+      #f-solid:focus-visible ~ .filter-bar label[for="f-solid"] {
+        outline: 3px solid #111111;
+        outline-offset: 2px;
+      }
+
+      /* hide cards that do not match the checked category (display:none -> no gaps) */
+      #f-embroidered:checked
+        ~ #product-grid
+        article:not([data-category="embroidered"]),
+      #f-printed:checked ~ #product-grid article:not([data-category="printed"]),
+      #f-solid:checked ~ #product-grid article:not([data-category="solid"]) {
+        display: none;
+      }
+    </style>
   </head>
 
   <body
@@ -191,148 +252,190 @@
         </div>
       </header>
     </section>
-    <section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mx-3">
-      <article>
-        <a href="shortcake.html">
+    <div id="shop" class="mx-3">
+      <!-- Task 1: radios must come BEFORE the grid (sibling selectors) -->
+      <input
+        type="radio"
+        name="category"
+        id="f-all"
+        class="filter-radio"
+        checked
+      />
+      <input
+        type="radio"
+        name="category"
+        id="f-embroidered"
+        class="filter-radio"
+      />
+      <input type="radio" name="category" id="f-printed" class="filter-radio" />
+      <input type="radio" name="category" id="f-solid" class="filter-radio" />
+
+      <div
+        class="filter-bar flex flex-wrap gap-2 mb-4"
+        role="group"
+        aria-label="Filter by category"
+      >
+        <label for="f-all" class="filter-label">All</label>
+        <label for="f-embroidered" class="filter-label">Embroidered</label>
+        <label for="f-printed" class="filter-label">Printed</label>
+        <label for="f-solid" class="filter-label">Solid</label>
+      </div>
+
+      <p
+        id="no-results"
+        class="is-hidden text-center text-lg font-semibold text-[#263b39] py-10"
+      >
+        No products found
+      </p>
+
+      <section
+        id="product-grid"
+        class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"
+      >
+        <article data-category="embroidered">
+          <a href="shortcake.html">
+            <img
+              src="picnicclub/shortcake.webp"
+              aria-label="shortcake article"
+              class="hover:scale-110"
+            />
+            <p class="product-name">Short Cake</p>
+            <p class="text-xs font-semibold text-[#544f56]">PICNIC CLUB</p>
+            <p class="product-price font-bold">PKR 7,900</p>
+            <div
+              class="w-4 h-4 bg-[#ec8bcb] mb-1 border-black border-b-2"
+            ></div>
+          </a>
+          <button
+            type="button"
+            class="w-full bg-[#263b39] text-white py-2 px-3 mt-2 hover:bg-[#405b57] rounded"
+          >
+            Add to Cart
+          </button>
+        </article>
+        <article data-category="printed">
           <img
-            src="picnicclub/shortcake.webp"
-            aria-label="shortcake article"
+            src="picnicclub/mochi.webp"
+            aria-label="mochi article"
             class="hover:scale-110"
           />
-          <p>Short Cake</p>
+          <p class="product-name">Mochi</p>
           <p class="text-xs font-semibold text-[#544f56]">PICNIC CLUB</p>
-          <p class="font-bold">PKR 7,900</p>
-          <div class="w-4 h-4 bg-[#ec8bcb] mb-1 border-black border-b-2"></div>
-        </a>
-        <button
-          type="button"
-          class="w-full bg-[#263b39] text-white py-2 px-3 mt-2 hover:bg-[#405b57] rounded"
-        >
-          Add to Cart
-        </button>
-      </article>
-      <article>
-        <img
-          src="picnicclub/mochi.webp"
-          aria-label="mochi article"
-          class="hover:scale-110"
-        />
-        <p>Mochi</p>
-        <p class="text-xs font-semibold text-[#544f56]">PICNIC CLUB</p>
-        <p class="font-bold">PKR 10,350</p>
-        <div class="w-4 h-4 bg-[#8ef690] mb-1 border-black border-b-2"></div>
-        <button
-          type="button"
-          class="w-full bg-[#263b39] text-white py-2 px-3 mt-2 hover:bg-[#405b57] rounded"
-        >
-          Add to Cart
-        </button>
-      </article>
-      <article>
-        <img
-          src="picnicclub/picnic.webp"
-          alt="picnic article"
-          class="hover:scale-110"
-        />
-        <p>Picnic</p>
-        <p class="text-xs font-semibold text-[#544f56]">PICNIC CLUB</p>
-        <p class="font-bold">PKR 10,350</p>
-        <div class="w-4 h-4 bg-black mb-1 border-black border-b-2"></div>
-        <button
-          type="button"
-          class="w-full bg-[#263b39] text-white py-2 px-3 mt-2 hover:bg-[#405b57] rounded"
-        >
-          Add to Cart
-        </button>
-      </article>
-      <article>
-        <img
-          src="picnicclub/cloudy.webp"
-          alt="cloudy article"
-          class="hover:scale-110"
-        />
-        <p>Cloudy</p>
-        <p class="text-xs font-semibold text-[#544f56]">PICNIC CLUB</p>
-        <p class="font-bold">PKR 10,350</p>
-        <div class="w-4 h-4 bg-[#5629f8] mb-1 border-black border-b-2"></div>
-        <button
-          type="button"
-          class="w-full bg-[#263b39] text-white py-2 px-3 mt-2 hover:bg-[#405b57] rounded"
-        >
-          Add to Cart
-        </button>
-      </article>
-      <article>
-        <img
-          src="picnicclub/seafoam.webp"
-          alt="seafoam article"
-          class="hover:scale-110"
-        />
-        <p>Sea Foam</p>
-        <p class="text-xs font-semibold text-[#544f56]">PICNIC CLUB</p>
-        <p class="font-bold">PKR 10,350</p>
-        <div class="w-4 h-4 bg-white mb-1 border-black border-b-2"></div>
-        <button
-          type="button"
-          class="w-full bg-[#263b39] text-white py-2 px-3 mt-2 hover:bg-[#405b57] rounded"
-        >
-          Add to Cart
-        </button>
-      </article>
-      <article>
-        <img
-          src="picnicclub/oceansoda.webp"
-          alt="oceansoda article"
-          class="hover:scale-110"
-        />
-        <p>Ocean Soda</p>
-        <p class="text-xs font-semibold text-[#544f56]">PICNIC CLUB</p>
-        <p class="font-bold">PKR 10,350</p>
-        <div class="w-4 h-4 bg-[#6cf471] mb-1 border-black border-b-2"></div>
-        <button
-          type="button"
-          class="w-full bg-[#263b39] text-white py-2 px-3 mt-2 hover:bg-[#405b57] rounded"
-        >
-          Add to Cart
-        </button>
-      </article>
+          <p class="product-price font-bold">PKR 10,350</p>
+          <div class="w-4 h-4 bg-[#8ef690] mb-1 border-black border-b-2"></div>
+          <button
+            type="button"
+            class="w-full bg-[#263b39] text-white py-2 px-3 mt-2 hover:bg-[#405b57] rounded"
+          >
+            Add to Cart
+          </button>
+        </article>
+        <article data-category="printed">
+          <img
+            src="picnicclub/picnic.webp"
+            alt="picnic article"
+            class="hover:scale-110"
+          />
+          <p class="product-name">Picnic</p>
+          <p class="text-xs font-semibold text-[#544f56]">PICNIC CLUB</p>
+          <p class="product-price font-bold">PKR 10,350</p>
+          <div class="w-4 h-4 bg-black mb-1 border-black border-b-2"></div>
+          <button
+            type="button"
+            class="w-full bg-[#263b39] text-white py-2 px-3 mt-2 hover:bg-[#405b57] rounded"
+          >
+            Add to Cart
+          </button>
+        </article>
+        <article data-category="printed">
+          <img
+            src="picnicclub/cloudy.webp"
+            alt="cloudy article"
+            class="hover:scale-110"
+          />
+          <p class="product-name">Cloudy</p>
+          <p class="text-xs font-semibold text-[#544f56]">PICNIC CLUB</p>
+          <p class="product-price font-bold">PKR 10,350</p>
+          <div class="w-4 h-4 bg-[#5629f8] mb-1 border-black border-b-2"></div>
+          <button
+            type="button"
+            class="w-full bg-[#263b39] text-white py-2 px-3 mt-2 hover:bg-[#405b57] rounded"
+          >
+            Add to Cart
+          </button>
+        </article>
+        <article data-category="embroidered">
+          <img
+            src="picnicclub/seafoam.webp"
+            alt="seafoam article"
+            class="hover:scale-110"
+          />
+          <p class="product-name">Sea Foam</p>
+          <p class="text-xs font-semibold text-[#544f56]">PICNIC CLUB</p>
+          <p class="product-price font-bold">PKR 10,350</p>
+          <div class="w-4 h-4 bg-white mb-1 border-black border-b-2"></div>
+          <button
+            type="button"
+            class="w-full bg-[#263b39] text-white py-2 px-3 mt-2 hover:bg-[#405b57] rounded"
+          >
+            Add to Cart
+          </button>
+        </article>
+        <article data-category="solid">
+          <img
+            src="picnicclub/oceansoda.webp"
+            alt="oceansoda article"
+            class="hover:scale-110"
+          />
+          <p class="product-name">Ocean Soda</p>
+          <p class="text-xs font-semibold text-[#544f56]">PICNIC CLUB</p>
+          <p class="product-price font-bold">PKR 10,350</p>
+          <div class="w-4 h-4 bg-[#6cf471] mb-1 border-black border-b-2"></div>
+          <button
+            type="button"
+            class="w-full bg-[#263b39] text-white py-2 px-3 mt-2 hover:bg-[#405b57] rounded"
+          >
+            Add to Cart
+          </button>
+        </article>
 
-      <article>
-        <img
-          src="picnicclub/seasaltcaramel.webp"
-          alt="seasalt caramel article"
-          class="hover:scale-110"
-        />
-        <p>Seasalt Caramel</p>
-        <p class="text-xs font-semibold text-[#544f56]">PICNIC CLUB</p>
-        <p class="font-bold">PKR 6,450</p>
-        <div class="w-4 h-4 bg-[#8B4513] mb-1 border-black border-b-2"></div>
-        <button
-          type="button"
-          class="w-full bg-[#263b39] text-white py-2 px-3 mt-2 hover:bg-[#405b57] rounded"
-        >
-          Add to Cart
-        </button>
-      </article>
-      <article>
-        <img
-          src="picnicclub/sandcastle.webp"
-          alt="sand castle article"
-          class="hover:scale-110"
-        />
-        <p>Sand Castle</p>
-        <p class="text-xs font-semibold text-[#544f56]">PICNIC CLUB</p>
-        <p class="font-bold">PKR 6,400</p>
-        <div class="w-4 h-4 bg-[#E3FF00] mb-1 border-black border-b-2"></div>
+        <article data-category="solid">
+          <img
+            src="picnicclub/seasaltcaramel.webp"
+            alt="seasalt caramel article"
+            class="hover:scale-110"
+          />
+          <p class="product-name">Seasalt Caramel</p>
+          <p class="text-xs font-semibold text-[#544f56]">PICNIC CLUB</p>
+          <p class="product-price font-bold">PKR 6,450</p>
+          <div class="w-4 h-4 bg-[#8B4513] mb-1 border-black border-b-2"></div>
+          <button
+            type="button"
+            class="w-full bg-[#263b39] text-white py-2 px-3 mt-2 hover:bg-[#405b57] rounded"
+          >
+            Add to Cart
+          </button>
+        </article>
+        <article data-category="embroidered">
+          <img
+            src="picnicclub/sandcastle.webp"
+            alt="sand castle article"
+            class="hover:scale-110"
+          />
+          <p class="product-name">Sand Castle</p>
+          <p class="text-xs font-semibold text-[#544f56]">PICNIC CLUB</p>
+          <p class="product-price font-bold">PKR 6,400</p>
+          <div class="w-4 h-4 bg-[#E3FF00] mb-1 border-black border-b-2"></div>
 
-        <button
-          type="button"
-          class="w-full bg-[#263b39] text-white py-2 px-3 mt-2 hover:bg-[#405b57] rounded"
-        >
-          Add to Cart
-        </button>
-      </article>
-    </section>
+          <button
+            type="button"
+            class="w-full bg-[#263b39] text-white py-2 px-3 mt-2 hover:bg-[#405b57] rounded"
+          >
+            Add to Cart
+          </button>
+        </article>
+      </section>
+    </div>
 
     <footer class="bg-[#263B39] text-[#F5C9DA] mt-12">
       <div
@@ -394,5 +497,6 @@
         &copy; 2026 OSENFITTERS. All rights reserved.
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
