@@ -6,6 +6,47 @@
     <title>OsenFitters | Clothing Store</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      /* Midterm: N = 15 -> BP = 600 + 15 = 615px
+         sticky offset = (15 mod 40) + 70 = 85px */
+
+      /* below BP: one column -> image, details, description */
+      .product-layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "image"
+          "details"
+          "description";
+        gap: 2.5rem;
+      }
+      .product-image {
+        grid-area: image;
+      }
+      .product-details {
+        grid-area: details;
+      }
+      .product-description {
+        grid-area: description;
+      }
+
+      /* from BP: image + details side by side, description full width */
+      @media (min-width: 615px) {
+        .product-layout {
+          grid-template-columns: 1fr 1fr;
+          grid-template-areas:
+            "image details"
+            "description description";
+          align-items: start;
+        }
+        .product-details {
+          position: sticky;
+          top: 85px;
+          align-self: start;
+        }
+      }
+    </style>
   </head>
 
   <body
@@ -194,17 +235,19 @@
     </section>
     <article
       id="short-cake-details"
-      class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center"
+      class="product-layout max-w-6xl mx-auto px-6 py-12"
     >
-      <div class="w-full">
+      <div class="product-image w-full">
         <img
           src="collectionpics/picnicclub.webp"
           alt="Short Cake from Picnic Club collection"
-          class="w-full h-[450px] md:h-[600px] object-cover rounded-lg"
+          class="w-full aspect-[3/4] object-cover rounded-lg"
         />
       </div>
 
-      <div class="flex flex-col items-start gap-5">
+      <div
+        class="product-details flex flex-col items-start gap-5 bg-white/40 rounded-lg p-6"
+      >
         <p class="text-sm tracking-[3px] text-[#6c0d8c] uppercase">
           Picnic Club Collection
         </p>
@@ -214,12 +257,6 @@
         </h1>
 
         <p class="text-2xl font-medium text-[#263b39]">Rs. 7,900</p>
-
-        <p class="text-base leading-7 text-gray-600">
-          Add a playful touch to your everyday wardrobe with the Short Cake
-          outfit from our Picnic Club collection. Designed for a comfortable and
-          stylish look, it is perfect for casual outings and everyday wear.
-        </p>
 
         <!-- Quantity Selector -->
         <div class="mt-2">
@@ -255,6 +292,65 @@
 
         <p class="text-sm text-gray-500">Product code: PC-SC-001</p>
       </div>
+
+      <section class="product-description text-base leading-7 text-gray-700">
+        <h2 class="text-2xl font-semibold text-[#263b39] mb-4">Description</h2>
+        <p class="mb-4">
+          Add a playful touch to your everyday wardrobe with the Short Cake
+          outfit from our Picnic Club collection. Designed for a comfortable and
+          stylish look, it is perfect for casual outings and everyday wear.
+        </p>
+        <p class="mb-4">
+          The set is inspired by sweet picnic afternoons. A soft white shirt
+          carries delicate strawberry, heart and bow embroidery along the
+          neckline, cuffs and hem, and it is paired with relaxed pink shalwar
+          trousers that finish the look with a gentle, pastel colour story.
+        </p>
+        <h3 class="text-xl font-semibold text-[#263b39] mt-6 mb-2">
+          Fabric and fit
+        </h3>
+        <p class="mb-4">
+          The shirt is cut from a lightweight cotton blend that stays soft on
+          the skin and breathes well in warm weather. The straight silhouette
+          with a slightly squared neckline sits comfortably without clinging,
+          and the wide sleeves are finished with embroidered cuffs. The shalwar
+          has a flared leg and an elasticated waistband, so it is easy to wear
+          for a full day.
+        </p>
+        <h3 class="text-xl font-semibold text-[#263b39] mt-6 mb-2">
+          Styling ideas
+        </h3>
+        <p class="mb-4">
+          Wear it with a plain dupatta and flat sandals for a college day or a
+          family lunch. For an evening outing, add small pearl earrings and a
+          light shawl. The colours also work well with white sneakers if you
+          want a more casual, modern look.
+        </p>
+        <h3 class="text-xl font-semibold text-[#263b39] mt-6 mb-2">
+          Care instructions
+        </h3>
+        <p class="mb-4">
+          Machine wash cold with similar colours and use a mild detergent. Turn
+          the shirt inside out so that the embroidery stays neat, and do not use
+          bleach. Dry in the shade and iron on a low setting from the reverse
+          side.
+        </p>
+        <h3 class="text-xl font-semibold text-[#263b39] mt-6 mb-2">
+          Delivery and returns
+        </h3>
+        <p class="mb-4">
+          Orders are usually dispatched within two to three working days and
+          delivered across Pakistan within five to seven working days.
+          Unstitched alterations are not available, but unworn items with the
+          original tags can be exchanged within the return window shown in the
+          Returns &amp; Exchanges page.
+        </p>
+        <p>
+          Product colours may look slightly different on different screens
+          because of lighting and display settings. Please check the product
+          code PC-SC-001 when contacting customer service.
+        </p>
+      </section>
     </article>
 
     <footer class="bg-[#263B39] text-[#F5C9DA] mt-12">
