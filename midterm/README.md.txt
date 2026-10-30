@@ -14,6 +14,8 @@ category tiles). The product listing page with prices and Add to Cart buttons is
 `picnicclub.html`, and the product detail page is `shortcake.html`, so Task 1 and Task 3 are done
 on picnicclub.html and Task 2 on shortcake.html.
 
+"to go to the product listing from women means picnincclub.html...click on the text of the card "picnic club" "
+
 ## Files changed
 
 - `picnicclub.html`
